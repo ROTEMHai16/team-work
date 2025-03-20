@@ -12,9 +12,11 @@ count_by_extension() {
 folder_total_size() {
     du -s | awk '{print $1}'
 }
+echo "Listing this contents of this folder in descending order by size:"
 # List the folder by sizes
 list_descending
 # Count by a given extension
+echo "Count by the given extension:"
 count_by_extension $1
 # Show total folder size and do some stuff with it
 size=$(folder_total_size)
