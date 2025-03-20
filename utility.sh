@@ -21,7 +21,8 @@ count_by_extension $1
 # Show total folder size and do some stuff with it
 size=$(folder_total_size)
 echo "Total folder size is $size"
-if (( folder_total_size < 1000 )); then
+
+if (( folder_total_size > 1000 )); then
     read -p "Wanna delete (r) or compress (c) this folder? to do nothing enter something else: r/c/* " answer
     if [[ $answer == "r" ]]; then
         rm -rf ../.
