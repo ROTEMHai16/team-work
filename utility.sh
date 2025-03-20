@@ -1,12 +1,12 @@
 #!/bin/bash
 
 list_descending() {
-    ls -S -r
+    ls -S
 }
 
 count_by_extension() {
     suffix="$1"
-    ll | grep "$suffix" | wc -l
+    ls -l | grep "$suffix" | wc -l
 }
 
 folder_total_size() {
